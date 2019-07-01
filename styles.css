@@ -27,20 +27,22 @@ body {
   box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
   margin: 20px auto;
   overflow: hidden;
-  width: 550px;
+  width: 560px;
 }
 
-.space {
-  margin-bottom: 16px;
+
+.header{
+    margin-bottom: 32px;
 }
 
-.space-md {
-  margin-bottom: 32px;
+div.fieldset, .fieldset textarea{
+    margin-bottom: 16px;
 }
 
 .label {
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 7px;
 }
 
 .header {
@@ -52,13 +54,18 @@ body {
 }
 
 .header .title {
+  display: flex;
+  flex-direction: column;
   color: #fff;
   font-size: 23px;
   font-weight: 300;
 }
 
-.header .title span {
+span:last-child{
   font-weight: bold;
+}
+
+.header .title span {
   font-size: 24px;
   line-height: 1.46;
 }
@@ -73,14 +80,84 @@ body {
   resize: none;
   width: 100%;
   font-size: 14px;
+  line-height: 24px;
+  font-family: Inter;
 }
 
 .fieldset {
+  display: flex;
+  flex-direction: column;
   padding: 0 32px;
 }
 
+
+/* Customize the label (the container) */
+.container {
+display: flex;
+align-items: center;
+font-size: 14px;
+/* line-height: 24px; */
+}
+
+    /* Hide the browser's default checkbox */
+    .container input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    }
+
+        /* Create a custom checkbox */
+        .checkmark {
+        display: flex;
+        height: 24px;
+        width: 24px;
+        border-radius: 4px;
+        margin-right: 10px;
+        background-color: #2F3676;
+        align-items: center;
+        justify-content: center;
+        }
+
+            /* On mouse-over, add a grey background color */
+            .container:hover input ~ .checkmark {
+            background-color: #191847;;
+            }
+
+                /* Create the checkmark/indicator (hidden when not checked) */
+                .checkmark:after {
+                content: "";
+                display: none;
+                }
+
+                    /* Show the checkmark when checked */
+                    .container input:checked ~ .checkmark:after {
+                    display: flex;
+                    align-content: center;
+                    justify-content: center;
+                    }
+
+                        /* Style the checkmark/indicator */
+                        .container .checkmark:after {
+                        width: 10px;
+                        height: 5px;
+                        border: solid white;
+                        border-width: 0 0 3px 3px;
+                        transform: rotate(-45deg);
+                        }
+
+
+.counter{
+    display: flex;
+}
+
 .counter svg {
-  fill: #2f3676;
+    fill: #2f3676;
+  }
+
+.counter svg:hover{
+    fill: #191847;
 }
 
 .counter input {
@@ -91,6 +168,7 @@ body {
   font-weight: bold;
   margin: 0 8px;
   width: 60px;
+  text-align: center;
 }
 
 .footer {
@@ -114,7 +192,11 @@ body {
 }
 
 .footer button:focus,
-.footer button:hover {
-  border: 2px solid #2f3676;
+.footer button:hover{
   background: #191847;
+}
+
+
+.fieldset .container, button{
+    cursor: pointer;
 }
