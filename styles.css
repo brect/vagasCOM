@@ -23,11 +23,11 @@ body {
 
 .box {
   background-color: #f2f2f2;
-  border-radius: 8px;
   box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
   margin: 20px auto;
   overflow: hidden;
   width: 560px;
+  height: 796px;
 }
 
 
@@ -73,7 +73,6 @@ span:last-child{
 .form textarea {
   background: #dde3e9;
   border: 1px solid #2f3676;
-  border-radius: 8px;
   color: #071723;
   height: 140px;
   padding: 16px;
@@ -150,6 +149,7 @@ font-size: 14px;
 
 .counter{
     display: flex;
+    height: 42px;
 }
 
 .counter svg {
@@ -160,10 +160,9 @@ font-size: 14px;
     fill: #191847;
 }
 
-.counter input {
+.counter .controler {
   background: #dde3e9;
   border: 1px solid #2f3676;
-  border-radius: 7px;
   font-size: 20px;
   font-weight: bold;
   margin: 0 8px;
@@ -171,6 +170,11 @@ font-size: 14px;
   text-align: center;
 }
 
+
+.counter{
+  border: none;
+  background: none;
+}
 .footer {
   padding: 32px;
   background: #dde3e9;
@@ -182,7 +186,6 @@ font-size: 14px;
   appearance: none;
   background: #2f3676;
   border: 0;
-  border-radius: 8px;
   color: #fff;
   padding: 10px;
   font-size: 18px;
@@ -199,4 +202,10 @@ font-size: 14px;
 
 .fieldset .container, button{
     cursor: pointer;
+}
+
+
+
+.box, .form textarea, .counter, .counter .controler{
+	border-radius: 8px;
 }

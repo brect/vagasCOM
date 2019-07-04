@@ -1,74 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
-	<title>Teste Frontend VAGAS.com</title>
-	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>Teste Frontend VAGAS.com</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
-	<div class="box">
-		<div class="header">
-			<div class="title">
+    <div class="box">
+        <div class="header">
+            <div class="title">
                 <span>Formulário</span>
                 <span>para compra de</span>
                 <span>Pacote de Stickers</span>
             </div>
         </div>
-        
 
-		<div class="form">
 
-            
-			<div class="fieldset">
+        <div class="form">
+
+
+            <div class="fieldset">
                 <div class="label">Quais stickers?</div>
-                
+
                 <label class="container">
-                        <input type="checkbox" />
-                        <span class="checkmark"></span>
-                        React
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    React
                 </label>
                 <label class="container">
-                        <input type="checkbox" />
-                        <span class="checkmark"></span>
-                        Vue
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    Vue
                 </label>
                 <label class="container">
-                        <input type="checkbox" />
-                        <span class="checkmark"></span>
-                        Angular
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    Angular
                 </label>
             </div>
-            
 
-            
-			<div class="fieldset">
 
-				<div class="label">Quantos stickers de cada?</div>
-                
-				<div class="counter">
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
-						<path d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" /></svg>
-					<input type="text" placeholder="0" />
-					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
-						<path d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" /></svg>
-				</div>
+
+            <div class="fieldset">
+
+                <div class="label">Quantos stickers de cada?</div>
+
+                <div class="counter">
+                    <button class="counter counter-down">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
+                            <path
+                                d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" />
+                            </svg>
+                    </button>
+                    <input class="counter controler" type="text" placeholder="0" disabled />
+                    <button class="counter counter-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
+                            <path
+                                d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" />
+                            </svg>
+                    </button>
+                </div>
             </div>
 
-			<div class="fieldset">
-				<div class="label">Observações:</div>
+            <div class="fieldset">
+                <div class="label">Observações:</div>
 
-				<textarea name="descricao" placeholder="Alguma dúvida? Recado?"></textarea>
-			</div>
+                <textarea name="descricao" placeholder="Alguma dúvida? Recado?"></textarea>
+            </div>
 
-			<div class="footer">
-				<button>Enviar</button>
-			</div>
-		</div>
-	</div>
+            <div class="footer">
+                <button>Enviar</button>
+            </div>
+        </div>
+    </div>
 
-	<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
