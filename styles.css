@@ -10,24 +10,21 @@ html {
   }
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background: rebeccapurple;
   color: #071723;
 }
 
 .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #f2f2f2;
   box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
   margin: 20px auto;
   overflow: hidden;
   width: 560px;
-  height: 796px;
+  height: 794px;
 }
 
 
@@ -42,7 +39,7 @@ div.fieldset, .fieldset textarea{
 .label {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 7px;
+  margin-bottom: 16px;
 }
 
 .header {
@@ -70,9 +67,13 @@ span:last-child{
   line-height: 1.46;
 }
 
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
 .form textarea {
   background: #dde3e9;
-  border: 1px solid #2f3676;
   color: #071723;
   height: 140px;
   padding: 16px;
@@ -95,7 +96,8 @@ span:last-child{
 display: flex;
 align-items: center;
 font-size: 14px;
-/* line-height: 24px; */
+line-height: 24px;
+margin-bottom: 7px;
 }
 
     /* Hide the browser's default checkbox */
@@ -114,7 +116,6 @@ font-size: 14px;
         width: 24px;
         border-radius: 4px;
         margin-right: 10px;
-        background-color: #2F3676;
         align-items: center;
         justify-content: center;
         }
@@ -150,6 +151,8 @@ font-size: 14px;
 .counter{
     display: flex;
     height: 42px;
+    border: none;
+    background: none;
 }
 
 .counter svg {
@@ -162,7 +165,6 @@ font-size: 14px;
 
 .counter .controler {
   background: #dde3e9;
-  border: 1px solid #2f3676;
   font-size: 20px;
   font-weight: bold;
   margin: 0 8px;
@@ -171,10 +173,6 @@ font-size: 14px;
 }
 
 
-.counter{
-  border: none;
-  background: none;
-}
 .footer {
   padding: 32px;
   background: #dde3e9;
@@ -182,30 +180,35 @@ font-size: 14px;
   justify-content: flex-end;
 }
 
-.footer button {
-  appearance: none;
-  background: #2f3676;
-  border: 0;
-  color: #fff;
-  padding: 10px;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 8px 32px;
-}
+  .footer button {
+    appearance: none;
+    border: 0;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 8px 32px;
+  }
 
-.footer button:focus,
-.footer button:hover{
-  background: #191847;
-}
+    .footer button:focus,
+    .footer button:hover{
+      background: #191847;
+    }
 
 
 .fieldset .container, button{
     cursor: pointer;
 }
 
+.box, .form textarea, .counter, .counter .controler, .footer button{
+	border-radius: 7px;
+}
 
+.checkmark, .footer button {
+  background: #2f3676;
+}
 
-.box, .form textarea, .counter, .counter .controler{
-	border-radius: 8px;
+.form textarea, .counter .controler{
+  border: 1px solid #2f3676;
 }
